@@ -1,7 +1,50 @@
 {{page-title "HackerNewsEmber"}}
 
+
 {{!-- NavBar --}}
-<h1>HackerNews</h1>
-{{outlet}}
+<div class="navbar">
+	<div>
+		<h1>
+			<img alt="HackerNews' square logo of a white letter 'y' with orange background" src="https://news.ycombinator.com/y18.gif" />
+			HackerNews
+		</h1>
+	</div>
+	<div id="nav-links">
+		<a href="">new</a>
+		<a href="">past</a>
+		<a href="">comments</a>
+		<a href="">ask</a>
+		<a href="">show</a>
+		<a href="">jobs</a>
+		<a href="">submit</a>
+	</div>
+	<div>
+		<a href="">login</a>
+	</div>
+</div>
+
+<div class="container" id = "top-stories">
+	<TopStories />
+	{{outlet}}
+</div>
+
 {{!-- Footer --}}
-{{!-- SearchBar --}}
+<div class="footer">
+	<div class="footer-links">
+		<a href="">Guidelines</a>
+		<a href="">FAQ</a>
+		<a href="">Lists</a>
+		<a href="">API</a>
+		<a href="">Security</a>
+		<a href="">Legal</a>
+		<a href="">Apply to YC</a>
+		<a href="">Contact</a>
+	</div>
+	{{!-- SearchBar --}}
+	<div id="searchbar">
+		<form method="get">
+			<label>Search: </label>
+			<input type="text" />
+		</form>
+	</div>	
+</div>
