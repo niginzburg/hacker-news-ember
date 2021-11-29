@@ -1,21 +1,22 @@
 import Controller from '@ember/controller';
 import { tracked } from '@glimmer/tracking';
-import { action } from '@ember/object';
 
 export default class PostItemsController extends Controller {
   queryParams = ['page', 'postsPerPage', 'postType'];
 
   @tracked page = 0;
-  postsPerPage = 10;
-  postType = 'top';	// top, best, new, ask, show, job
-  totalPosts;
-  startIndexForList;
+  @tracked postsPerPage = 10;
+  @tracked postType = 'top'; // top, best, new, ask, show, job
 
-  get pageNum() {
-    return page;
+  get page() {
+    return this.page;
   }
 
-  get postsPerPageNum() {
-    return postsPerPage;
+  get postsPerPage() {
+    return this.postsPerPage;
+  }
+
+  get postType() {
+    return this.postType;
   }
 }

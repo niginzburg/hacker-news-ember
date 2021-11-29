@@ -1,0 +1,17 @@
+<ol start="{{@model.startIndexForList}}">
+{{#each @model.posts as |post|}}
+    {{#if post}}
+     <li class='{{post.type}}' id='{{post.id}}'>
+        <a href='{{post.url}}'>{{post.title}}</a>
+     </li>
+     {{/if}}
+{{/each}}
+</ol>
+{{#unless (is-out-of-bounds-page @model @controller)}}
+   {{#if (is-greater-than @controller.page 0)}}
+      <button type="button" {{on 'click' (fn this.goToPrevPage @controller)}} > Prev </button>
+      {{/if}}
+   {{#unless (is-last-page @model.length @controller)}}
+      <button type="button" {{on 'click' (fn this.goToNextPage @controller)}} > Next </button>
+   {{/unless}}
+{{/unless}}

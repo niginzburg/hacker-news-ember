@@ -8,6 +8,9 @@ export default class PostItemsRoute extends Route {
     page: {
       refreshModel: true,
     },
+    postType: {
+      refreshModel: true,
+    },
   };
 
   // Retrieve the item from Hacker News API with the provided id
@@ -38,7 +41,7 @@ export default class PostItemsRoute extends Route {
     // Fetch the items from Hacker News API
     const response = await fetch(concatLink);
     const responseJson = await response.json();
-    this.length = responseJson.length;
+    postItemsModel.length = responseJson.length;
 
     // Populate stories[]
     for (let i = startIndex; i < startIndex + params.postsPerPage; i++) {
