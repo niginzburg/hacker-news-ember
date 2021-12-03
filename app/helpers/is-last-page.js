@@ -1,8 +1,8 @@
 import { helper } from '@ember/component/helper';
 
-export default helper(function isLastPage(param /*, named*/) {
-  let modelLength = param[0];
-  let controller = param[1];
+export default helper(function isLastPage(params /*, named*/) {
+  let modelLength = params[0];
+  let controller = params[1];
 
   let postsNum = controller.page * controller.postsPerPage;
   return (

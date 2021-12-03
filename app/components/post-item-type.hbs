@@ -1,0 +1,20 @@
+<span class="post-type-tag {{@post.type}}">
+	{{#if (is-equal @post.type 'story')}}
+		<FaIcon
+			@icon="link"
+			@title= {{@post.type}}
+		/>
+	{{/if}}
+	{{#if (is-equal @post.type 'job')}}
+		<FaIcon
+			@icon="briefcase"
+			@title= {{@post.type}}
+		/>
+	{{/if}}
+	{{#if (is-equal @post.type 'poll')}}
+		<FaIcon
+			@icon="poll"
+			@title= {{@post.type}}
+		/>
+	{{/if}}
+</span>

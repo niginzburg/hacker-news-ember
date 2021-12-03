@@ -1,0 +1,14 @@
+{{page-title "User"}}
+<Navbar
+	@requestedId='items-tab' 
+	@controller={{this}}/>
+{{!-- <NavbarItem 
+	@selectedItem = 'user'
+/> --}}
+<User
+    @model={{@model}}
+    @controller = {{this}}
+/>
+
+<Footer />
+

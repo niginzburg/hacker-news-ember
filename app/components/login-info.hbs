@@ -1,0 +1,41 @@
+<div class="login-info">
+	<table>
+		<thead>
+			<tr>
+				<td colspan="2">
+					<h2>
+						{{@titleText}}
+					</h2>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					{{@text}}
+				</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>
+					<label for="username">Username:</label>
+				</td>
+				<td>
+					<Input name="username" type="text" />
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label for="password">Password:</label>
+				</td>
+				<td>
+					<Input name="password" type="text" />
+				</td>
+			</tr>
+		</tbody>
+		<tfoot>
+		</tfoot>
+	</table>
+	<button id="{{@buttonText}}-btn" type="submit">
+		{{to-uppercase @buttonText}}
+	</button>
+</div>

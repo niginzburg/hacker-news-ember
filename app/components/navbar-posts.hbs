@@ -1,0 +1,24 @@
+<div class="container navbar-posts">
+	<div class="navbar navbar-posts-links">
+		<div class="post-items-span">
+			{{#each @controller.postTypes as |pT|}}
+				<span class="post-items-span">
+					<LinkTo 
+						id={{pT}}
+						class="post-items-tabs"
+						@route="post-items"
+						@query={{hash postType=pT page=0}}
+					> 
+						{{to-uppercase pT}}
+						{{#if (is-equal pT @controller.postType)}} 
+							<span>
+								{{select-element pT 'selected-tab'}}
+							</span>
+						{{/if}}
+					</LinkTo>
+				</span>
+			{{/each}}
+		</div>
+	</div>
+</div>
+

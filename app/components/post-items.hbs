@@ -1,17 +1,65 @@
-<ol start="{{@model.startIndexForList}}">
-{{#each @model.posts as |post|}}
-    {{#if post}}
-     <li class='{{post.type}}' id='{{post.id}}'>
-        <a href='{{post.url}}'>{{post.title}}</a>
-     </li>
-     {{/if}}
-{{/each}}
-</ol>
-{{#unless (is-out-of-bounds-page @model @controller)}}
-   {{#if (is-greater-than @controller.page 0)}}
-      <button type="button" {{on 'click' (fn this.goToPrevPage @controller)}} > Prev </button>
+<div class="container posts" id = "stories">
+   <ol start="{{@model.startIndexForList}}">
+      {{#each @model.posts as |post|}}
+         {{#if post}}
+            <li class='post-info-li {{post.type}}' id='{{post.id}}'> 
+            <div class="post-items-content">
+               <PostItemTitle @post={{post}} />
+               <div class="posts-under-title">
+                  <PostItemBy @post={{post}} />
+                  <PostItemTime @post={{post}} />
+               </div>
+            </div>
+            <div class="post-items-side-content">
+               <PostItemComment @post={{post}} />
+               <PostItemScore @post={{post}} @controller={{@controller}}/>
+               <LinkTo
+                  @route="login">
+               <FaIcon
+                     @icon="times"
+                     @title="hide post"
+                     class="fas hide-post"
+                  />
+               </LinkTo>
+            </div>
+            </li>
+        {{/if}}
+      {{/each}}
+   </ol>
+</div>
+
+
+<div class="buttons" id="prevNextBtns">
+   {{#unless (is-out-of-bounds-page @model @controller)}}
+      <button type="button" {{on 'click' (fn this.goToFirstPage @controller)}} >
+         <FaIcon 
+            @icon="angle-double-left"
+         />
+      </button>
+      {{#if (is-greater-than @controller.page 0)}}
+         <button type="button" {{on 'click' (fn this.goToPrevPage @controller)}} >
+            <FaIcon 
+               @icon="angle-left"
+            />
+         </button>
       {{/if}}
-   {{#unless (is-last-page @model.length @controller)}}
-      <button type="button" {{on 'click' (fn this.goToNextPage @controller)}} > Next </button>
+      <span id="page-num">
+         Page {{display-page-num @controller.page}}
+      </span>
+      {{#unless (is-last-page @model.length @controller)}}
+         <button type="button" {{on 'click' (fn this.goToNextPage @controller)}} >
+            <FaIcon 
+               @icon="angle-right"
+            />
+         </button>
+      {{/unless}}
+      <button type="button" {{on 'click' (fn this.goToLastPage @model @controller)}} >
+         <FaIcon 
+               @icon="angle-double-right"
+            />
+      </button>
    {{/unless}}
-{{/unless}}
+   {{#if (is-out-of-bounds-page @model @controller)}}
+      No Posts Here.
+   {{/if}}
+</div>

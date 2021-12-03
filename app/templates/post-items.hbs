@@ -1,4 +1,14 @@
+{{page-title "PostItems"}}
+<div class="header">
+    <Navbar 
+        @requestedId='posts-tab'
+        @controller={{this}} />
+    <NavbarPosts
+       @controller={{this}} />
+</div>
+
 <PostItems
     @model={{@model}}
-    @controller = {{this}}
-/>
+    @controller = {{this}}/>
+
+<Footer />

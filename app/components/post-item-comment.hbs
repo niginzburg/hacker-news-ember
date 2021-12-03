@@ -1,0 +1,13 @@
+<div class="post-items-icons post-info post-type-comment">
+	<span class="view-comments">		
+		<a>
+			<FaIcon 
+               @icon="comment"
+               class="fas"
+            />
+        </a>
+	</span>
+	<span class="post-score-span">
+   		{{format-number (count-items @post.kids)}} 
+   </span>
+</div>

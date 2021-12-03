@@ -1,0 +1,27 @@
+<div class="post-items-icons post-info post-title">
+   {{#if @post.url}}
+      <a href='{{@post.url}}' target="_blank" rel="noopener noreferrer">
+         <PostItemType @post={{@post}} />
+         <span class="post-title">
+            {{@post.title}}
+         </span>
+      </a>
+   {{/if}}
+
+   {{#unless @post.url}}
+      <LinkTo 
+         @route="item"
+         post = {{@post}}
+      >
+         <span class="post-type-tag {{@post.type}}">
+            <FaIcon
+               @icon="file-alt"
+               @title= {{@post.type}}
+            />
+         </span>
+         <span class="post-title">
+            {{@post.title}}
+         </span>
+      </LinkTo>
+   {{/unless}}
+</div>

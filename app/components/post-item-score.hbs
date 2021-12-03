@@ -1,0 +1,17 @@
+<div class="post-info post-score">
+   <span class="upvote-post">
+      	<LinkTo
+			@route="login"
+	        returnTo ={{@post.id}}
+	        page={{@controller.page}}
+     	>
+        	<FaIcon 
+               @icon="chevron-up"
+               class="fas"
+            />
+      </LinkTo>
+   </span>
+   <span class="post-score-span">
+   {{format-number @post.score}} 
+   </span>
+</div>

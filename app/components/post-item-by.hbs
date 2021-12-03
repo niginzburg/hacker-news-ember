@@ -1,0 +1,18 @@
+<div class="post-items-icons post-info post-item-by">
+	{{#if @post.by}}
+	<span>		
+		<LinkTo
+			@route="user"
+			@query={{hash id=@post.by}}
+		>	
+			<span>
+				<FaIcon
+					@icon="user" /> 
+			</span>
+			<span class="post-item-by-user">
+				{{@post.by}}
+			</span>
+		</LinkTo>
+	</span>
+   {{/if}}
+</div>

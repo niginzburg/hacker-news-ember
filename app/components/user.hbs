@@ -1,0 +1,24 @@
+{{#if @model}}
+	<div class="user-info-container">
+	<div class="user-info">
+		<div class="user-info-id">
+			<FaIcon
+				@icon="user" 
+			/> {{@model.id}}
+		</div>
+		<div class="user-info-karma">{{@model.karma}} karma</div>
+		<div class="user-info-created">
+			Joined {{format-date @model.created}}
+		</div>
+		{{#if @model.about}}
+			<div class="user-info-about" id="about-description">
+				{{{@model.about}}}
+			</div>	
+		{{/if}}
+	</div>
+	</div>
+{{/if}}
+{{#unless @model}}
+	User Not Found.
+{{/unless}}
+

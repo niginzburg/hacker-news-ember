@@ -1,0 +1,12 @@
+<div class="post-items-icons post-info post-type-time">
+	{{#if @post.by}}
+		<span class="post-time-span">
+	   		<FaIcon
+				@icon="clock" 
+			/>
+	   	</span>
+	  	<span>
+	  		{{format-time @post.time}}
+	  	</span>
+	{{/if}}
+</div>
