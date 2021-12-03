@@ -23,6 +23,11 @@ h2 {
   color: var(--orange);
 }
 
+#hnTitle {
+  font-size: 32px;
+  color: white;
+}
+
 #homepageLink {
   background: var(--orange);
 }
@@ -71,7 +76,7 @@ hr {
   align-items: center;
 }
 
-.navbar a {
+.navbar a:not(#hnTitle) {
   float: left;
   font-size: 16px;
   color: white;
@@ -80,7 +85,7 @@ hr {
   text-decoration: none;
 }
 
-.navbar a:not(#heading):hover {
+.navbar a:not(#hnTitle):hover {
   background-color: var(--orange);
 }
 

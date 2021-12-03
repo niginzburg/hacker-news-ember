@@ -2,7 +2,13 @@
 	<span class="navbar-links nav-logo">
 		<Header />
 		<span class="navbar-links nav-title">
-			HackerNews
+			<LinkTo
+				@route="post-items"
+				@query= {{hash postType='top' page=0}}
+				id="hnTitle"
+				>
+					HackerNews
+			</LinkTo>
 			<span class="navbar-viewing-route">
 				{{@viewingRoute}}
 			</span>
