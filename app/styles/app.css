@@ -359,10 +359,13 @@ li:hover {
   justify-content: flex-start;
   align-items: center;
   margin: 10px;
+  width: 90%;
+  /*background-color: var(--lightgray);*/
 }
 
 .poll-options:hover{
   background-color: var(--lightgray);
+  color: black;
 }
 
 .text-input {
