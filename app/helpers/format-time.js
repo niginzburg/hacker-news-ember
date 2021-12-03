@@ -1,12 +1,12 @@
 import { helper } from '@ember/component/helper';
 
 export default helper(function formatTime(param /*, named*/) {
-  let postTime = param[0] * 1000;
-  let currTime = Date.now();
-  let timeDiffSeconds = Math.floor((currTime - postTime) / 1000);
-  let timeDiffMinutes = timeDiffSeconds / 60;
-  let timeDiffHours = timeDiffMinutes / 60;
-  let timeDiffDays = timeDiffHours / 24;
+  const postTime = param[0] * 1000;
+  const currTime = Date.now();
+  const timeDiffSeconds = Math.floor((currTime - postTime) / 1000);
+  const timeDiffMinutes = timeDiffSeconds / 60;
+  const timeDiffHours = timeDiffMinutes / 60;
+  const timeDiffDays = timeDiffHours / 24;
 
   let timestamp = '';
   if (timeDiffDays > 1) {

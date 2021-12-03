@@ -26,7 +26,7 @@ export default class PostItemsComponent extends Component {
     let leftOverPosts = 0;
     lastPageNum = Math.floor(model.length / controller.postsPerPage);
     leftOverPosts = model.length % controller.postsPerPage;
-    if (leftOverPosts == 0) lastPageNum = lastPageNum - 1;
+    if (leftOverPosts === 0) lastPageNum = lastPageNum - 1;
     controller.page = lastPageNum;
     return controller.page;
   }
@@ -34,7 +34,7 @@ export default class PostItemsComponent extends Component {
   @action
   goToPage(model, controller, value) {
     if (value < 0) controller.page = 0;
-    let lastPageNum = model.length / controller.postsPerPage;
+    const lastPageNum = model.length / controller.postsPerPage;
     if (value > lastPageNum) controller.page = lastPageNum;
     return controller.page;
   }

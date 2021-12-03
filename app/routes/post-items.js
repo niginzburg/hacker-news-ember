@@ -23,7 +23,7 @@ export default class PostItemsRoute extends Route {
 
   // Retrieves the IDs of the posts from Hacker News API
   async model(params) {
-    let startIndex = params.page * params.postsPerPage;
+    const startIndex = params.page * params.postsPerPage;
 
     // Container for the postItemsModel
     let postItemsModel = {
@@ -33,7 +33,7 @@ export default class PostItemsRoute extends Route {
     };
 
     this.startIndexForList = startIndex + 1;
-    let concatLink =
+    const concatLink =
       'https://hacker-news.firebaseio.com/v0/' +
       params.postType +
       'stories.json';
