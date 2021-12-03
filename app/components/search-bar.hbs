@@ -1,13 +1,14 @@
-<div id="searchbar-icon" class="searchbar">
-	<FaIcon
-		@icon="search"
-	/>
-</div>
-<div id="search-bar" class="searchbar">
+<span id="search-bar" class="searchbar">
 	<Input 
 		@type="text"
 		id="search-bar-input"
 		placeholder="Search HackerNews..."
-		size=50
+		size={{@inputSize}}
 		/>
-</div>	
+</span>	
+<span id="searchbar-icon" class="searchbar">
+	<FaIcon
+		@icon="search"
+		class="fas"
+	/>
+</span>

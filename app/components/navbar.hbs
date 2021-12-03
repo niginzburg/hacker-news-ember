@@ -1,9 +1,14 @@
 <div class="navbar">
-	<span class="navbar-links">
+	<span class="navbar-links nav-logo">
 		<Header />
+		<span class="navbar-links nav-title">
+			HackerNews
+		</span>
 	</span>
-	<span class="navbar-links nav-title">
-		HackerNews
+	<span class="navbar-links nav-search">
+		<SearchBar 
+			@inputSize=60
+		/>
 	</span>
 	<span class="navbar-links nav-login">
 		<LinkTo 
