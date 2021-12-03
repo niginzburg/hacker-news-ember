@@ -9,10 +9,7 @@
    {{/if}}
 
    {{#unless @post.url}}
-      <LinkTo 
-         @route="item"
-         post = {{@post}}
-      >
+      <a>
          <span class="post-type-tag {{@post.type}}">
             <FaIcon
                @icon="file-alt"
@@ -22,6 +19,6 @@
          <span class="post-title">
             {{@post.title}}
          </span>
-      </LinkTo>
+      </a>
    {{/unless}}
 </div>
