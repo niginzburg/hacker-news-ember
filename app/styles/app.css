@@ -1,6 +1,296 @@
+/*General*/
+:root {
+  --orange: #f60;
+  --gray: dimgray;
+  --darkgray:  #333;
+  --lightgray: lightgray;
+}
+
+a{
+  color: var(--darkgray);
+  text-decoration: none;
+}
+
+a:visited {
+  color: var(--darkgray);
+}
+
+a:not(.nav-title):hover {
+  cursor: pointer;
+}
+
+h2 {
+  color: var(--orange);
+}
+
+#heading {
+  background-color: var(--orange);
+  font-size: large;
+  margin-right: 40px;
+}
+
+.fas:hover {
+  color: var(--orange);
+}
+
+.fas:visited {
+  color: var(--darkgray);
+}
+
+.nav-title {
+
+  font-size: 32px;
+  color: white;
+  text-align: center;
+  align-items: center;
+  padding: 2px;
+  text-decoration: none;
+  font-family: Verdana, sans-serif;
+}
+
 .navbar {
-	display:flex;
-	justify-content:space-between;
-	align-items:center;
-	flex-wrap:wrap;
+  background-color: var(--darkgray);
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navbar a:not(#heading):hover {
+  background-color: var(--orange);
+}
+
+.navbar.navbar-posts-links {
+  justify-content: center;
+  background-color: var(--gray);
+}
+
+.navbar-links {
+  display: flex;
+}
+
+table{
+  margin: 20px;
+}
+
+td {
+  text-align: center;
+}
+
+/*PostItems*/
+
+ol{
+  padding-right: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: -1px 1px 2px var(--lightgray);
+  margin: 10px 0;
+  width: 80%;
+}
+
+li:hover {
+  background-color: var(--lightgray);
+}
+
+.hide-post {
+  color: var(--orange);
+}
+
+.hide-post:hover {
+  color: var(--darkgray);
+}
+
+.post-info-container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+}
+
+.post-items-content {
+  margin: 0 20px;
+}
+
+.post-items-side-content {
+  display: flex;
+  flex-direction: row;
+}
+
+.post-score{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 10px;
+  width: 50px;
+}
+
+.post-type-comment{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.post-title {
+  font-size: 1.1em;
+}
+
+.post-title a:hover,
+.post-item-by a:hover {
+  color: var(--orange);
+}
+
+.post-type-tag {
+  color: var(--orange);
+}
+
+.post-type-tag:visited {
+  color: var(--darkgray);
+  padding: 2px;
+}
+
+.posts-under-title {
+  display: flex;
+}
+
+.post-info,
+.post-item-by-user,
+.post-title {
+  margin: 5px;
+}
+
+.post-comment a,
+.post-item-by a,
+.post-time a {
+  color: var(--darkgray);
+}
+
+#prevNextBtns {
+  text-align: center;
+}
+
+#prevNextBtns button,
+.post-info button{
+  background-color: var(--lightgray);
+  color: gray;
+  padding: 10px;
+  border: none;
+}
+
+#prevNextBtns button:hover{
+  background-color: #ff6600;
+  color: black;
+  padding: 10px;
+}
+
+.selected-tab{
+  background-color: var(--orange);
+}
+
+.upvote-post a{
+  color: black;
+}
+
+/*User*/
+
+.user-info {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  background: white;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: -1px 1px 2px var(--lightgray);
+  margin: 10px 0;
+  width: 80%;
+}
+
+.user-info-about {
+  text-align: center;
+  margin: 20px;
+}
+
+.user-info-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.user-info-id {
+  color: var(--orange);
+}
+
+/*Login*/
+.login-and-signup {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#login-btn,
+#register-btn {
+    margin: 20px;
+    font-size: 0.8em;
+    border-radius: 5px;
+    box-shadow: none;
+    border: none;
+    padding: 5px;
+}
+
+#login-btn:hover,
+#register-btn:hover {
+  background: var(--darkgray);
+  color: white;
+}
+
+.login-info {
+  background: white;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: -1px 1px 2px var(--lightgray);
+  margin: 20px 0;
+  text-align: center;
+}
+
+/*Footer*/
+.footer{
+  background-color: var(--darkgray);
+  font-family: Arial, Helvetica, sans-serif;  
+  margin-top: 20px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer a{
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.footer a:hover{
+  color: var(--orange);
 }
