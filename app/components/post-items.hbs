@@ -1,13 +1,13 @@
 <div class="container posts" id = "stories">
    <ol start="{{@model.startIndexForList}}">
-      {{#each @model.posts as |post|}}
+      {{#each @model.posts as |post|}} 
          {{#if post}}
             <li class='post-info-li {{post.type}}' id='{{post.id}}'> 
             <div class="post-items-content">
                <PostItemTitle @post={{post}} />
                <div class="posts-under-title">
                   <PostItemBy @post={{post}} />
-                  <PostItemTime @post={{post}} />
+                  <PostItemTime @post={{post}}/>
                </div>
             </div>
             <div class="post-items-side-content">
@@ -27,7 +27,6 @@
       {{/each}}
    </ol>
 </div>
-
 
 <div class="buttons" id="prevNextBtns">
    {{#unless (is-out-of-bounds-page @model @controller)}}

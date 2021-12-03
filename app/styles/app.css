@@ -22,15 +22,13 @@ a:not(.nav-title):hover {
 h2 {
   color: var(--orange);
 }
-/*
-#heading {
-  background-color: var(--orange);
-  font-size: large;
-  margin-right: 40px;
-}*/
 
 #homepageLink {
   background: var(--orange);
+}
+
+hr {
+  margin: 20px;
 }
 
 .fas:hover {
@@ -110,7 +108,6 @@ h2 {
 }
 
 #searchbar-icon svg:hover{
-  
   color: white;
   cursor: pointer;
 }
@@ -136,6 +133,9 @@ li {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.post-info-li {
   background: white;
   padding: 20px;
   border-radius: 20px;
@@ -225,9 +225,9 @@ li:hover {
 }
 
 #prevNextBtns button,
-.post-info button{
+.post-info button {
   background-color: var(--lightgray);
-  color: gray;
+  color: var(--gray);
   padding: 10px;
   border: none;
 }
@@ -306,6 +306,70 @@ li:hover {
   box-shadow: -1px 1px 2px var(--lightgray);
   margin: 20px 0;
   text-align: center;
+}
+
+/*Items*/
+.comment-btn {
+  disabled: true;
+  background-color: var(--lightgray);
+  color: var(--gray);
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+#item-page {
+  display: flex;
+  justify-content: center;
+}
+
+.item-story {
+  background: white;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: -1px 1px 2px var(--lightgray);
+  margin: 10px 0;
+  width: 80%;
+}
+
+.item-story-comment {
+  margin: 20px;
+}
+
+.item-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.item-pollopts {
+  display: flex;
+  flex-direction: column;
+}
+
+.item-story-comment {
+  text-align: center;
+}
+
+.item-text {
+  margin: 20px;
+}
+
+.poll-options {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 10px;
+}
+
+.poll-options:hover{
+  background-color: var(--lightgray);
+}
+
+.text-input {
+  font-size: medium;
+  border-radius: 5px;
+  border-spacing: 1px;
+  padding: 5px;
 }
 
 /*Footer*/

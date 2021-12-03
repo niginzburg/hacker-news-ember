@@ -11,4 +11,5 @@ Router.map(function () {
   this.route('post-items', { path: '/' });
   this.route('login');
   this.route('user');
+  this.route('item');
 });

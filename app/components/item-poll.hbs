@@ -1,0 +1,19 @@
+<div class="item-story">
+	<Item
+		@model={{@model}} />
+	<div class="item-text">
+		{{{@model.text}}}
+	</div>
+	<div class="item-pollopts">
+		{{#if @model.parts}}
+			{{#each @model.parts as |pollopt|}}
+				<div>
+					<ItemPollopts
+						@model={{pollopt}} />
+				</div>
+			{{/each}}
+		{{/if}}
+	</div>
+	<Comments 
+    	@model={{@model}} />
+</div>

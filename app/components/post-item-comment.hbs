@@ -1,13 +1,16 @@
 <div class="post-items-icons post-info post-type-comment">
 	<span class="view-comments">		
-		<a>
+		<LinkTo
+			@route="item"
+			@query={{hash itemType=@postType id=@post.id}}
+			>	
 			<FaIcon 
                @icon="comment"
                class="fas"
             />
-        </a>
+        </LinkTo>
 	</span>
 	<span class="post-score-span">
-   		{{format-number (count-items @post.kids)}} 
+   		{{format-number @post.descendants}} 
    </span>
 </div>

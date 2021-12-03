@@ -2,6 +2,8 @@ import { helper } from '@ember/component/helper';
 
 export default helper(function formatNumber(param /*, named*/) {
   let num = param[0];
+  if(!num) 
+    return 0;
   let numInt = 0;
   let numDec = 0;
   let res = '';

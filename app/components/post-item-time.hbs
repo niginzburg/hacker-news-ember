@@ -6,7 +6,12 @@
 			/>
 	   	</span>
 	  	<span>
-	  		{{format-time @post.time}}
+	  		{{#if @formatDate}}
+	  			{{format-date @post.time}}
+	  		{{/if}}
+	  		{{#unless @formatDate}}
+	  			{{format-time @post.time}}
+	  		{{/unless}}
 	  	</span>
 	{{/if}}
 </div>

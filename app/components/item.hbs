@@ -1,0 +1,19 @@
+<div class="item-container">
+	<div class="post-items-content">
+       <PostItemTitle
+			@post={{@model}} />
+       <div class="posts-under-title">
+          	<PostItemBy
+          		@post={{@model}} />
+          	<PostItemTime
+          		@post={{@model}}
+          		@formatDate="true" />
+       </div>
+    </div>
+	<div class="post-items-side-content">
+	<PostItemScore
+		@post={{@model}} />
+	</div>
+</div>
+
+

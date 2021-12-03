@@ -1,0 +1,11 @@
+{{page-title "Item"}}
+<Navbar 
+    @requestedId='posts-tab'
+    @controller={{this}} 
+    @viewingRoute="Items" />
+
+<Items
+    @model={{@model}}
+    @controller = {{this}}/>
+
+<Footer />

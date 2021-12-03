@@ -1,0 +1,21 @@
+{{!-- Creates an item container for each type of post --}}
+<div id="item-page">
+{{#if @model.deleted}}
+	Sorry. This item has been deleted.
+{{/if}}
+
+{{#unless @model.deleted}}
+	{{#if (is-equal @model.type 'poll')}}
+		<ItemPoll
+			@model={{@model}} />
+	{{/if}}
+	{{#if (is-equal @model.type 'story')}}
+		<ItemStory
+			@model={{@model}} />
+	{{/if}}
+	{{#if (is-equal @model.type 'job')}}
+		<ItemJob
+			@model={{@model}} />
+	{{/if}}
+{{/unless}}
+</div>

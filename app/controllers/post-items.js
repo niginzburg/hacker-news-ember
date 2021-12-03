@@ -7,7 +7,7 @@ export default class PostItemsController extends Controller {
   @tracked page = 0;
   @tracked postsPerPage = 10;
   @tracked postType = 'top';
-  postTypes = ['top','best','ask','show','job'];
+  postTypes = ['top', 'best', 'ask', 'show', 'job'];
 
   get page() {
     return this.page;
