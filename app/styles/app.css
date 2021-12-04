@@ -143,7 +143,7 @@ li {
 .post-info-li {
   background: white;
   padding: 20px;
-  border-radius: 20px;
+  border-radius: 10px;
   box-shadow: -1px 1px 2px var(--lightgray);
   margin: 10px 0;
   width: 80%;
@@ -261,7 +261,7 @@ li:hover {
   align-items: center;
   background: white;
   padding: 20px;
-  border-radius: 20px;
+  border-radius: 10px;
   box-shadow: -1px 1px 2px var(--lightgray);
   margin: 10px 0;
   width: 80%;
@@ -307,7 +307,7 @@ li:hover {
 .login-info {
   background: white;
   padding: 20px;
-  border-radius: 20px;
+  border-radius: 10px;
   box-shadow: -1px 1px 2px var(--lightgray);
   margin: 20px 0;
   text-align: center;
@@ -332,7 +332,7 @@ li:hover {
 .item-story {
   background: white;
   padding: 20px;
-  border-radius: 20px;
+  border-radius: 10px;
   box-shadow: -1px 1px 2px var(--lightgray);
   margin: 10px 0;
   width: 80%;
