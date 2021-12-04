@@ -1,7 +1,6 @@
 # hacker-news-ember
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+Hacker News, a forum site primarily for front-end engineers, needs a UI update. This project focuses on creating a web application (using Ember.js) to improve the current HackerNews user interface.
 
 ## Prerequisites
 
@@ -11,41 +10,19 @@ You will need the following things properly installed on your computer.
 * [Node.js](https://nodejs.org/) (with npm)
 * [Ember CLI](https://ember-cli.com/)
 * [Google Chrome](https://google.com/chrome/)
+* [FontAwesome](https://fontawesome.com/)
 
 ## Installation
 
-* `git clone <repository-url>` this repository
+* `git clone niginzburg/hacker-news-ember`
 * `cd hacker-news-ember`
 * `npm install`
+* `npm i @fortawesome/ember-fontawesome`
 
 ## Running / Development
 
-* `ember serve`
+* `ember serve` or `npm start`
 * Visit your app at [http://localhost:4200](http://localhost:4200).
-* Visit your tests at [http://localhost:4200/tests](http://localhost:4200/tests).
-
-### Code Generators
-
-Make use of the many generators for code, try `ember help generate` for more details
-
-### Running Tests
-
-* `ember test`
-* `ember test --server`
-
-### Linting
-
-* `npm run lint`
-* `npm run lint:fix`
-
-### Building
-
-* `ember build` (development)
-* `ember build --environment production` (production)
-
-### Deploying
-
-Specify what it takes to deploy your app.
 
 ## Further Reading / Useful Links
 
