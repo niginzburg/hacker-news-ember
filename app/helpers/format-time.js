@@ -9,21 +9,22 @@ export default helper(function formatTime(param /*, named*/) {
   const timeDiffDays = timeDiffHours / 24;
 
   let timestamp = '';
-  if (timeDiffDays > 1) {
+  if (Math.floor(timeDiffDays) > 0) {
     timestamp = Math.floor(timeDiffDays) + ' day';
-    if (timeDiffDays > 2) {
+    if (Math.floor(timeDiffDays) > 1) {
       timestamp += 's';
     }
     timestamp += ' ago';
-  } else if (timeDiffHours > 1) {
+  } 
+  else if (Math.floor(timeDiffHours) > 0) {
     timestamp = Math.floor(timeDiffHours) + ' hour';
-    if (timeDiffHours > 2) {
+    if (Math.floor(timeDiffHours) > 1) {
       timestamp += 's';
     }
     timestamp += ' ago';
-  } else if (Math.floor(timeDiffMinutes) > 1) {
+  } else if (Math.floor(timeDiffMinutes) > 0) {
     timestamp = Math.floor(timeDiffMinutes) + ' minute';
-    if (timeDiffMinutes > 2) {
+    if (Math.floor(timeDiffMinutes) > 1) {
       timestamp += 's';
     }
     timestamp += ' ago';
