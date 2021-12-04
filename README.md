@@ -1,6 +1,6 @@
 # hacker-news-ember
 
-Hacker News, a forum site primarily for front-end engineers, needs a UI update. This project focuses on creating a web application (using Ember.js) to improve the current HackerNews user interface.
+Hacker News, a forum site primarily for front-end engineers, needs an update. This project focuses on creating a web application (using Ember.js) to improve the current HackerNews user interface.
 
 ## Prerequisites
 
