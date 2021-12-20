@@ -11,6 +11,7 @@
    {{#unless @post.url}}
       <LinkTo 
          @route="item"
+         @query={{hash itemType=@postType id=@post.id}}
          post = {{@post}}
       >
          <span class="post-type-tag {{@post.type}}">
